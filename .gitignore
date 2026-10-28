@@ -18,3 +18,7 @@
 # Ficheros de SQLite
 *.db
 *.db-journal
+
+# Ficheros del sistema operativo
+.DS_Store
+Thumbs.db
