@@ -1,0 +1,20 @@
+# Código compilado
+*.class
+/bin/
+
+# Eclipse
+.metadata/
+.settings/
+.project
+.classpath
+
+# IntelliJ IDEA
+.idea/
+*.iml
+
+# VS Code
+.vscode/
+
+# Ficheros de SQLite
+*.db
+*.db-journal

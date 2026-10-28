@@ -1,0 +1,43 @@
+PRÁCTICA: GESTOR DE DESCARGAS CON INTERFAZ GRÁFICA
+==================================================
+
+Objetivo
+--------
+Completar un gestor de descargas con interfaz gráfica en el que cada
+descarga se ejecuta en su propio hilo y su barra de progreso avanza
+mientras la ventana sigue respondiendo.
+
+La interfaz ya está construida. Solo tienes que implementar la parte
+de los hilos, siguiendo las tareas marcadas con TODO en el código.
+
+Estructura del proyecto
+-----------------------
+  dominio/Descarga.java          La tarea (Runnable)       -> TODO 1 a 4
+  gui/VentanaDescargas.java      La ventana (JFrame)       -> TODO 5 a 7
+  main/Main.java                 Arranca la aplicación     -> no se modifica
+
+Cómo importar el proyecto en Eclipse
+------------------------------------
+  1. File > Import... > General > Existing Projects into Workspace > Next.
+  2. Marca "Select archive file" y elige el fichero .zip descargado.
+  3. Comprueba que aparece "Practica_GestorDescargas" y pulsa Finish.
+  4. Ejecuta main/Main.java: verás la ventana, pero el botón todavía
+     no hace nada.
+
+Para ver la lista de tareas: Window > Show View > Tasks.
+
+Comprobación
+------------
+Cuando termines, al pulsar "Iniciar descargas":
+  - las tres barras avanzan a la vez, cada una a su ritmo;
+  - la ventana se puede mover y redimensionar mientras tanto;
+  - el botón está deshabilitado durante la descarga;
+  - al terminar, aparece "Descargas completadas" y el botón se reactiva.
+
+Analiza y responde (como comentario al inicio de VentanaDescargas)
+------------------------------------------------------------------
+  1. ¿Cuántos hilos tiene la aplicación mientras se descarga? ¿Qué hace cada uno?
+  2. ¿Qué ocurre si haces la descarga directamente dentro de iniciarDescargas(),
+     sin crear hilos?
+  3. ¿Por qué la barra se actualiza con SwingUtilities.invokeLater(...)?
+  4. ¿Qué ocurre si haces join() directamente en iniciarDescargas()?
